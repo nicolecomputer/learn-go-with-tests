@@ -25,6 +25,17 @@ func TestRepeat(t *testing.T) {
 	})
 }
 
+func TestRepeatWithCount(t *testing.T) {
+	t.Run("x with 9", func(t *testing.T) {
+		got := RepeatWithCount("x", 9)
+		expected := "xxxxxxxxx"
+
+		if got != expected {
+			t.Errorf("Expected %s got %s", expected, got)
+		}
+	})
+}
+
 func ExampleRepeat() {
 	repeated := Repeat("z")
 	fmt.Println(repeated)
