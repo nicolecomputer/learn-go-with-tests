@@ -41,3 +41,9 @@ func ExampleRepeat() {
 	fmt.Println(repeated)
 	// Output: zzzzz
 }
+
+func ExampleRepeatWithCount() {
+	repeated := RepeatWithCount("j", 3)
+	fmt.Println(repeated)
+	// Output: jjj
+}
