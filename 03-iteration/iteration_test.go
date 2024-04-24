@@ -36,6 +36,8 @@ func TestRepeatWithCount(t *testing.T) {
 	})
 }
 
+// Examples
+
 func ExampleRepeat() {
 	repeated := Repeat("z")
 	fmt.Println(repeated)
@@ -46,4 +48,12 @@ func ExampleRepeatWithCount() {
 	repeated := RepeatWithCount("j", 3)
 	fmt.Println(repeated)
 	// Output: jjj
+}
+
+// Benchmark
+
+func BenchmarkRepeatWithCount(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		RepeatWithCount("a", 7)
+	}
 }
