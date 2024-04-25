@@ -1,6 +1,6 @@
 package arraysandslices
 
-func Sum(numbers [5]int) int {
+func Sum(numbers []int) int {
 	result := 0
 	for _, val := range numbers {
 		result += val
