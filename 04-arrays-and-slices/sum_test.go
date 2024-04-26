@@ -48,4 +48,13 @@ func TestSumAll(t *testing.T) {
 			t.Errorf("got %v want %v", got, want)
 		}
 	})
+
+	t.Run("Sum empty slices", func(t *testing.T) {
+		got := SumAll([]int{}, []int{1, 2, 3}, []int{4, 5, 6}, []int{})
+		want := []int{0, 6, 15, 0}
+
+		if !reflect.DeepEqual(got, want) {
+			t.Errorf("got %v want %v", got, want)
+		}
+	})
 }
