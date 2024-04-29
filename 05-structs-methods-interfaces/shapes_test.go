@@ -37,7 +37,7 @@ func TestArea(t *testing.T) {
 	})
 
 	t.Run("12 height 6 base Triangle", func(t *testing.T) {
-		triangle := Triangle{12, 6}
+		triangle := Triangle{Base: 12, Height: 6}
 
 		checkArea(t, triangle, 36.0)
 	})
